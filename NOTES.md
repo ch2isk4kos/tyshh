@@ -12,7 +12,7 @@
 
 5. add index to posts in routes.rb
 
-6. add root 'posts#index' == {controller => posts, action => index}
+6. add root 'posts#index'
 
 7. add views/posts/index.html.erb
 
@@ -20,6 +20,9 @@
 
 9. added form_for to posts/new.html.erb
 
+10. $ rails generate model Post title:string body:text
+
+11. $ rails db:migrate
 
 
 # Work Flow
