@@ -13,3 +13,10 @@
 <button type="button" name="button">
     <%= link_to "Edit Post", edit_post_path %>
 </button>
+
+<button type="button" name="button">
+    <%= link_to 'Delete Post',
+                 post_path(@post),
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+</button>
