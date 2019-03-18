@@ -32,7 +32,11 @@
 
 15. add views/posts/show.html.erb
 
-16.
+16. added before_action to posts_controller.rb
+
+17. add views/posts/edit.html.erb
+
+18. added edit and update functionality to posts_controller
 
 
 # Work Flow

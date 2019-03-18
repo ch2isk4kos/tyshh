@@ -1,0 +1,24 @@
+<h1>Tip Toe Back from Your Words</h1>
+
+<div class="#">
+    <%= form_for @post do |f|%>
+        <p>
+            <%= f.label :title %>: </br>
+            <%= f.text_field :title %>
+        </p>
+        <p>
+            <%= f.label :body %>: </br>
+            <%= f.text_area :body %>
+        </p>
+
+        <%= f.submit "Submit Retraction" %>
+
+    <% end %>
+</div>
+
+
+<div class="#">
+    <button type="button" name="button">
+        <%= link_to "Cancel", post_path %>
+    </button>
+</div>
