@@ -1,15 +1,22 @@
 <h1>New Hot Take</h1>
 
-<%= form_for :post, url: posts_path do |f|%>
-    <p>
-        <%= f.label :title%>: </br>
-        <%= f.text_field :title %>
-    </p>
-    <p>
-        <%= f.label :body%>: </br>
-        <%= f.text_area :body %>
-    </p>
+<div class="#">
+    <%= form_for @post do |f|%>
+        <p>
+            <%= f.label :title %>: </br>
+            <%= f.text_field :title %>
+        </p>
+        <p>
+            <%= f.label :body %>: </br>
+            <%= f.text_area :body %>
+        </p>
 
-    <%= f.submit "Submit Take" %>
+        <%= f.submit "Submit Take" %>
 
-<% end %>
+    <% end %>
+</div>
+
+
+<div class="#">
+    <%= link_to "Cancel", posts_path %>
+</div>

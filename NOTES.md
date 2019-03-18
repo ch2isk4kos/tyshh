@@ -24,6 +24,16 @@
 
 11. $ rails db:migrate
 
+12. $ rails generate controller welcome
+
+13. added root 'welcome#index' to routes.rb
+
+14. add views/welcome/index.html.erb
+
+15. add views/posts/show.html.erb
+
+16.
+
 
 # Work Flow
 
@@ -34,5 +44,11 @@
         $ rails generate controller posts
       setup routes
 
+      new <=> create
+      edit <=> update
+
     * make views
       models/index.html.erb
+            /show.html.erb
+            /new.html.erb
+            /
