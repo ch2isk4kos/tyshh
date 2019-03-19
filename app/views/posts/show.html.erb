@@ -6,6 +6,20 @@
     </p>
 
     <p class="body"><%= @post.body %></p>
+</div>
+
+<!-----------------------COMMENTS------------------------->
+<div class="comments">
+    <!--  counts how many comments there are -->
+    <h2><%= @post.comments.count %> Comments </h2>
+    <!-- renders _comment.html.erb file -->
+    <%= render @post.comments %>
+    <h3> Talk Your Sh^t ☟ </h3>
+    <!-- renders _form.html.erb file -->
+    <%= render "comments/form" %>
+</div>
+
+<!------------------------BUTTONS------------------------->
 
     <button type="button" name="button">
         <%= link_to "Back < Posts", posts_path %>
@@ -16,10 +30,5 @@
     </button>
 
     <button type="button" name="button">
-        <%= link_to 'Delete Post',
-                     post_path(@post),
-                     method: :delete,
-                     data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
     </button>
-
-</div>

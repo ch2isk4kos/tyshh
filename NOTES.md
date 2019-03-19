@@ -38,6 +38,26 @@
 
 18. added edit and update functionality to posts_controller
 
+19. added validates :title, presence: true
+          validates :body, presense: true
+    to post.rb
+
+20. configured validation via views/posts/[action].html.erb
+
+21. $ rails generate model Comment name:string body:string post:references
+
+22. $ rake db:migrate
+
+23. $ rails generate controller Comments
+
+24. nested comments into posts in routes.rb
+
+25. made partials in views/comments/*
+
+
+
+
+
 
 # Work Flow
 
