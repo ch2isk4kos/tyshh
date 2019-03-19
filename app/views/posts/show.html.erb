@@ -30,5 +30,5 @@
     </button>
 
     <button type="button" name="button">
-        <%= link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete Post', post_path(@post.comments), method: :delete, data: { confirm: 'Are you sure?' } %>
     </button>

@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     def show
         # defined in before_action
     end
-    
+
     def new
         @post = Post.new
     end
