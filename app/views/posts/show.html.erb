@@ -1,22 +1,25 @@
-<h1 class="title"><%= @post.title %></h1>
+<div class="post_content">
+    <h1 class="title"><%= @post.title %></h1>
 
-<p class="date">
-    Submitted <%= time_ago_in_words(@post.created_at) %> ago
-</p>
+    <p class="date">
+        Submitted <%= time_ago_in_words(@post.created_at) %> ago
+    </p>
 
-<p class="body"><%= @post.body %></p>
+    <p class="body"><%= @post.body %></p>
 
-<button type="button" name="button">
-    <%= link_to "Back < Posts", posts_path %>
-</button>
+    <button type="button" name="button">
+        <%= link_to "Back < Posts", posts_path %>
+    </button>
 
-<button type="button" name="button">
-    <%= link_to "Edit Post", edit_post_path %>
-</button>
+    <button type="button" name="button">
+        <%= link_to "Edit Post", edit_post_path %>
+    </button>
 
-<button type="button" name="button">
-    <%= link_to 'Delete Post',
-                 post_path(@post),
-                 method: :delete,
-                 data: { confirm: 'Are you sure?' } %>
-</button>
+    <button type="button" name="button">
+        <%= link_to 'Delete Post',
+                     post_path(@post),
+                     method: :delete,
+                     data: { confirm: 'Are you sure?' } %>
+    </button>
+
+</div>

@@ -1,13 +1,11 @@
 <h1>Post Up Index</h1>
 
-<div class="#">
+<% @posts.each do |post|%>
     <div class="post_wrapper">
-        <% @posts.each do |post|%>
-            <h2 class="title"><%= link_to "#{post.title}", post %></h2>
-            <p class="body"><%= post.body %></p>
-        <% end %>
+        <h2 class="title"><%= link_to "#{post.title}", post %></h2>
+        <p class="body"><%= truncate(post.body, length: 100) %></p>
     </div>
-</div>
+<% end %>
 
 <button type="button" name="button">
     <%= link_to "Create Take", new_post_path %>

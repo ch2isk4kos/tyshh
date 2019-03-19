@@ -3,15 +3,15 @@ class PostsController < ApplicationController
     before_action :find_post, only: [:show, :edit, :update, :destroy]
 
     def index
-        @posts = Post.all
-    end
-
-    def new
-        @post = Post.new
+        @posts = Post.all.order("created_at")
     end
 
     def show
         # defined in before_action
+    end
+    
+    def new
+        @post = Post.new
     end
 
     def create
