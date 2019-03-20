@@ -5,7 +5,7 @@
         <p class="comment_title"><%= time_ago_in_words(comment.created_at) %> ago</p>
     </div>
 
-    <!-- <button type="button" name="button">
-        <%= link_to 'Take Back Comment', post_path(@post.comments), method: :delete, data: { confirm: 'Are you sure?' } %>
-    </button> -->
+
+    <p><%= link_to "Take < Back", [comment.post, comment], method: :delete, data: {confirm: "You Sure?"} %></p>
+
 </div>
